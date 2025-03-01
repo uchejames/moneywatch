@@ -88,9 +88,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-    padding: 10px 20px;
-    margin: 5px 5px;
+    background: #f5f6fa;
+    padding: 15px 20px;
+    margin: 10px 8px;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     position: -webkit-sticky;
