@@ -34,7 +34,6 @@ body {
 }
 
 .card {
-    background-color: #fff;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     padding: 20px;
@@ -147,9 +146,11 @@ header img {
 }
 
 .hero {
+    background: url('/images/hero.png');
     text-align: center;
     padding: 50px 20px;
-    margin-top: 20px;
+    margin: 20px 10px;
+    border-radius: var(--border-radius);
 }
 
 .hero .badge {
@@ -165,7 +166,7 @@ header img {
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 20px;
     font-weight: 800;
 }
@@ -548,7 +549,7 @@ social-links img:hover {
     background: #fff;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px #3b5998;
 }
 
 .financial-roadblocks .card h3 {
@@ -565,6 +566,10 @@ social-links img:hover {
 }
 
 .services {
+    background: #fff;
+    margin: 0 20px;
+    box-shadow: 0 4px 8px #bdd2ff;
+    border-radius: 10px;
     padding: 4rem 2rem;
     text-align: center;
 }
@@ -625,6 +630,14 @@ social-links img:hover {
     }
 }
 
+.downloadApps {
+    margin: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px #bdd2ff;
+    padding: 40px 20px;
+    background: var(--secondary-color);
+    background-size: cover;
+}
 .downloadApp {
     padding: 40px 20px;
     background: url('/images/blackbg.jpg') no-repeat center center;
@@ -1297,4 +1310,22 @@ social-links img:hover {
         width: 100%;
         height: auto;
     }
+}
+
+/* Typing Effect */
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--primary-color); }
 }
