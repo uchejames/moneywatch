@@ -10,20 +10,24 @@
 <body>
     <header>
         <img src="/images/mw-logo-small.png" alt="Logo" width="50">
-        <nav>
+        <nav class="navbar">
             <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="about-us.html">About Us</a>
+            <a href="contact.html">Contact</a>
         </nav>
-        <button class="btn">Join Waitlist</button>
+        <button class="btn" onclick="location.href='contact.html'">Join Waitlist</button>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
     
     <section class="hero">
         <div class="badge">Smart AI for Your Finances</div>
         <h1>Manage all your finances <br>with our super app</h1>
         <p>Educating people to make clearer financial decisions by<br> creating a seamless platform for the people that provide direct communication<br> between their financial institutions and credit agencies in the palm of their hand.</p>
-        <button class="btn btn-cta">Join the waitlist</button>
+        <button class="btn btn-cta" onclick="location.href='contact.html'">Join the waitlist</button>
     </section>
 
     <section class="hero-image">
@@ -203,7 +207,7 @@
     </section>
     <section class="downloadApp">
         <div class="container">
-                <div class="downloadApp-grid">
+            <div class="downloadApp-grid">
                 <div class="downloadApp-image">
                     <img src="/images/download-app.png" alt="Download App">
                 </div>
@@ -212,12 +216,13 @@
                         <h2 style="text-align: left;">Download the App</h2>
                         <p style="text-align: left;">Get the Moneywatch app today and start managing your finances better.</p>
                     </div>
-                    <button class="btn btn-download">Download on the App Store</button>
-                    <button class="btn btn-download">Get it on Google Play</button>
+                    <button class="btn btn-download" onclick="location.href='contact.html'">Download on the App Store</button>
+                    <button class="btn btn-download" onclick="location.href='contact.html'">Get it on Google Play</button>
                 </div>
-                </div>
+            </div>
         </div>
     </section>
+
     <section class="footer-cta">
         <div class="cta-text">
             <h2 style="text-align: center;">Download the App</h2>
@@ -225,41 +230,52 @@
         </div>
         <form class="cta-form" action="/submit-email" method="POST" style="text-align: center;">
             <input type="email" name="email" placeholder="Enter your email" required>
-            <button type="submit" class="btn btn-join">Join the waitlist</button>
+            <button type="submit" class="btn btn-join" onclick="location.href='contact.html'">Join the waitlist</button>
         </form>
     </section>
 
     <footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-column">
-                <img src="images/mw-logo-small.png" alt="Moneywatch Logo" width="50">
-                <p>© 2025 Moneywatch. All rights reserved.</p>
-            </div>
-            <div class="footer-column">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <ul class="social-links">
-                    <li><a href="#"><img src="/images/linkedinicon.png" alt="LinkedIn" width="50"></a></li>
-                </ul>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <img src="images/mw-logo-small.png" alt="Moneywatch Logo" width="50">
+                    <p>© 2025 Moneywatch. All rights reserved.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <ul class="social-links">
+                        <li><a href="https://www.linkedin.com/in/msclegacycorp/"><img src="/images/linkedinicon.png" alt="LinkedIn" width="50"></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navbar = document.querySelector('.navbar');
+
+            hamburger.addEventListener('click', function() {
+                navbar.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
